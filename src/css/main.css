@@ -1,0 +1,39 @@
+body {
+    background-color: #231f20;
+    color: #f8f8f8;
+}
+
+code {
+    color: #231f20;
+}
+
+.container {
+    margin: 4em auto;
+    text-align: center;
+}
+
+.schizoImage img {
+    max-width: 600px;
+    cursor: zoom-in;
+}
+
+.previousToken {
+    transform: rotate(-180deg);
+}
+
+.token {
+    vertical-align: middle;
+    height: 100%;
+}
+
+.arrow {
+    padding: 0 2em;
+}
+
+input {
+    color: #231f20;
+}
+
+input[type="number"] {
+    width: 100px;
+}
