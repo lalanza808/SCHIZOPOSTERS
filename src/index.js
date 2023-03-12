@@ -7,10 +7,20 @@ import Chevron from './chevron.png';
 
 const startToken = 1;
 const endToken = 5555;
-const url = "https://files.lzahq.tech/schizoposters/images/";
+const url = "https://files.lzahq.tech/schizoposters/";
 
 function getRandomToken() {
   return Math.floor(Math.random() * (endToken - startToken) + startToken)
+}
+
+function Metadata(token) {
+  fetch(url + 'metadata/' + token + '.json')
+    .then((res) => res.json())
+    .then((data) => console.log(data))
+  return (
+    <>
+    </>
+  )
 }
 
 function App() {
@@ -24,9 +34,10 @@ function App() {
       <div className="row">
         <span className="schizoImage">
           <h2>SCHIZOPOSTER #{token}</h2>
-          <a href={url + "schizoposter_" + token + ".png"} target="_blank" rel="noopener noreferrer">
-            <img src={url + "schizoposter_" + token + ".resized.png"} alt={"SCHIZOPOSTER " + token} />
+          <a href={url + "images/schizoposter_" + token + ".png"} target="_blank" rel="noopener noreferrer">
+            <img src={url + "images/schizoposter_" + token + ".resized.png"} alt={"SCHIZOPOSTER " + token} />
           </a>
+          <Metadata token={token} />
         </span>
       </div>
       <div className="row">
